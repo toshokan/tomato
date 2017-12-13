@@ -127,12 +127,12 @@ void print_time(int timediff){
 		int min = timediff / 60;
 		int sec = timediff % 60;
 		if(sec == 0){
-			printf("\33[A\33[2K\%d minute(s) remaining...\n", min);
+			printf("\33[A\33[2K\r%d minute(s) remaining...\n", min);
 		} else {
-			printf("\33[A\33[2K\%d minute(s), %d second(s) remaining...\n", min, sec);
+			printf("\33[A\33[2K\r%d minute(s), %d second(s) remaining...\n", min, sec);
 		}
 	} else {
-		printf("\33[A\33[2K\%d second(s) remaining...\n", timediff);
+		printf("\33[A\33[2K\r%d second(s) remaining...\n", timediff);
 	}
 }
 
